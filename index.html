@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Profile Searcher</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <a class="logo" href="./">
+          <span class="logo-mark">GH</span>
+          <span>Profile Searcher</span>
+        </a>
+        <span class="status"
+          ><span class="dot"></span> Public data explorer</span
+        >
+      </header>
+
+      <section class="intro">
+        <p class="eyebrow">/ discover the people behind the code</p>
+        <h1>Find a GitHub<br /><em>profile.</em></h1>
+        <p class="intro-text">
+          Search any public GitHub username and get a quick, human-readable
+          snapshot of their work.
+        </p>
+
+        <form class="search" id="search-form">
+          <span class="prefix">@</span>
+          <input
+            id="username-input"
+            name="username"
+            type="search"
+            placeholder="enter a username"
+            autocomplete="off"
+            required
+          />
+          <button type="submit" id="search-button">
+            <span>Search profile</span><span class="arrow">&#8599;</span>
+          </button>
+        </form>
+        <p class="message" id="form-message"></p>
+      </section>
+
+      <section class="profile" id="profile-section">
+        <article class="card" id="profile-card">
+          <div class="card-top">
+            <span class="live"><span class="dot"></span> Profile preview</span>
+            <span class="date">Joined Jan 2011</span>
+          </div>
+          <div class="profile-info profile-grid" id="profile-content">
+            <img
+              class="avatar"
+              src="https://avatars.githubusercontent.com/u/583231?v=4"
+              alt="The Octocat profile picture"
+            />
+            <div class="profile-text">
+              <p class="eyebrow">Profile found</p>
+              <h2 id="profile-name">The Octocat</h2>
+              <span ><a class="githubProfile" href="#" target="_blank">View Github Profile</a></span>
+              <p class="bio">
+                GitHub's mascot and professional octopus. This is sample profile
+                content to preview the result layout.
+              </p>
+              <div class="stats">
+                <div class="stat">
+                  <strong id="repos">8</strong><span>Repos</span>
+                </div>
+                <div class="stat">
+                  <strong id="follower-count">1.2k</strong
+                  ><span>Followers</span>
+                </div>
+                <div class="stat">
+                  <strong id="following-count">9</strong><span>Following</span>
+                </div>
+              </div>
+              <div class="details">
+                <span id="location">&#9673; San Francisco</span>
+                <span id="company"> &#9670; GitHub</span>
+                <span
+                  >&#8599;
+                  <a href="https://github.blog" id="blog">github.blog</a></span
+                >
+               
+              </div>
+               <div class="repos">
+                    
+                </div>
+            </div>
+           
+          </div>
+        </article>
+      </section>
+
+      <footer class="footer">
+        <span>Built with the GitHub REST API</span>
+        <span>Vanilla HTML / CSS / JS</span>
+      </footer>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

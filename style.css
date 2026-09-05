@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+:root {
+  --ink: #18211f;
+  --muted: #71807b;
+  --paper: #f3f5ef;
+  --card: #fbfcf8;
+  --line: #dce3d9;
+  --accent: #d7f36b;
+  --accent-dark: #93ad35;
+  --coral: #ef765e;
+  --mono: "DM Mono", monospace;
+  --display: "Space Grotesk", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: var(--display);
+  background-image:
+    linear-gradient(rgba(24, 33, 31, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24, 33, 31, 0.035) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+button,
+input {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+.container {
+  width: min(1120px, calc(100% - 48px));
+  margin: auto;
+}
+.header {
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+.logo {
+  color: var(--ink);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.logo-mark {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  background: var(--ink);
+  color: var(--accent);
+  font: 500 11px var(--mono);
+  border-radius: 50%;
+}
+.status,
+.live,
+.label,
+.footer,
+.date {
+  font: 500 10px var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+.status {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.dot {
+  width: 7px;
+  height: 7px;
+  display: inline-block;
+  background: var(--accent-dark);
+  border-radius: 50%;
+}
+.intro {
+  padding: 92px 0 72px;
+  max-width: 760px;
+}
+.eyebrow {
+  margin: 0 0 20px;
+  color: var(--accent-dark);
+  font: 500 11px var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+h1 {
+  margin-bottom: 26px;
+  font-size: clamp(48px, 7vw, 76px);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  font-weight: 700;
+}
+h1 em {
+  color: var(--coral);
+  font-style: normal;
+}
+.intro-text {
+  max-width: 430px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.55;
+}
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 680px;
+  margin-top: 42px;
+  padding: 7px;
+  background: var(--card);
+  border: 1px solid var(--ink);
+  border-radius: 4px;
+}
+.prefix {
+  padding: 0 5px 0 15px;
+  color: var(--coral);
+  font: 500 20px var(--mono);
+}
+.search input {
+  min-width: 0;
+  flex: 1;
+  height: 52px;
+  border: 0;
+  outline: 0;
+  color: var(--ink);
+  background: transparent;
+  font-size: 18px;
+}
+.search input::placeholder {
+  color: #a6b0a8;
+}
+.search button {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  height: 52px;
+  padding: 0 19px;
+  border: 0;
+  color: var(--ink);
+  background: var(--accent);
+  font-weight: 700;
+  border-radius: 3px;
+}
+.search button:hover {
+  background: #c8e557;
+}
+.arrow {
+  font-size: 20px;
+}
+.message {
+  min-height: 20px;
+  margin: 18px 0 0;
+  color: var(--coral);
+  font: 11px var(--mono);
+}
+.profile {
+  padding-bottom: 80px;
+}
+.label span:first-child {
+  color: var(--coral);
+}
+.card {
+  min-height: 350px;
+  padding: 22px 28px 30px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 21px;
+  border-bottom: 1px solid var(--line);
+}
+.live {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+}
+.profile-info {
+  padding-top: 34px;
+}
+.profile-grid {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 32px;
+}
+.avatar {
+  width: 160px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 5px solid var(--accent);
+  border-radius: 50%;
+}
+.profile-text h2 {
+  margin: 5px 0 3px;
+  font-size: clamp(29px, 4vw, 45px);
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+.githubProfile {
+  color: var(--coral);
+  font: 14px var(--mono);
+  text-decoration: none;
+}
+.bio {
+  max-width: 610px;
+  margin: 20px 0 25px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.stat {
+  min-width: 105px;
+  padding: 12px 14px;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+.stat strong {
+  display: block;
+  font-size: 23px;
+  letter-spacing: -0.04em;
+}
+.stat span {
+  color: var(--muted);
+  font: 10px var(--mono);
+  text-transform: uppercase;
+}
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  margin: 0;
+  color: var(--muted);
+  font: 11px var(--mono);
+}
+.details span {
+  display: inline-flex;
+  gap: 7px;
+  align-items: center;
+}
+.details a {
+  color: var(--ink);
+}
+.repos {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 4px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.repo {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+.repo a {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--coral);
+  font-weight: 700;
+}
+.repo p {
+  min-height: 34px;
+  margin: 10px 0 14px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
+}
+.repo-info {
+  color: var(--muted);
+  font: 10px var(--mono);
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0 28px;
+  border-top: 1px solid var(--line);
+}
+@media (max-width: 650px) {
+  .container {
+    width: min(100% - 30px, 1120px);
+  }
+  .header {
+    height: 74px;
+  }
+  .status {
+    display: none;
+  }
+  .intro {
+    padding: 66px 0 56px;
+  }
+  h1 {
+    font-size: 58px;
+  }
+  .search {
+    display: block;
+    padding: 8px;
+  }
+  .prefix {
+    position: absolute;
+    top: 23px;
+    left: 6px;
+  }
+  .search input {
+    width: 100%;
+    height: 48px;
+    padding-left: 29px;
+  }
+  .search button {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .card {
+    padding: 18px;
+  }
+  .card-top {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .profile-grid {
+    display: block;
+  }
+  .avatar {
+    width: 120px;
+    margin-bottom: 24px;
+  }
+  .repos {
+    grid-template-columns: 1fr;
+  }
+  .footer {
+    gap: 20px;
+    flex-direction: column;
+  }
+}
